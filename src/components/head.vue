@@ -1,22 +1,15 @@
 <template>
-	<div>
-		<input type="text" @keyup.enter="additem" />
-	</div>
+    <div>
+        <input type="text" @keyup.enter="pushItem">
+    </div>
 </template>
-
 <script>
 export default {
-	name: "todo-head",
-	data() {
-		return {};
-	},
-	methods: {
-		additem(e) {
-			this.receive(e.target.value);
-			e.target.value = "";
-			// console.log(item);
-		},
-	},
-	props: ["receive"],
-};
+    name:'todo-head',
+    methods: {
+        pushItem(e){
+            this.$bus.$emit("pushItem", e.target.value)
+        }
+    },
+}
 </script>
