@@ -15,6 +15,8 @@ export default {
   width: 100px;
   height: 200px;
   float: left;
+  margin: 5px;
+  overflow: hidden;
   background-color: blueviolet;
 }
 .card img {
