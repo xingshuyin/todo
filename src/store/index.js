@@ -5,12 +5,6 @@ import plusobj from './plusobj'
 Vue.use(vuex)
 
 
-
-
-
-
-
-
 export default new vuex.Store({
     modules: {
         plusobj,
