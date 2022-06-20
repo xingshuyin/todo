@@ -1,23 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store'  //引入文件夹会默认引入文件夹里的index文件
-
-
 import router from './router'
 import VueRouter from 'vue-router'
-Vue.use(VueRouter)  //使用router插件
-
-// import Element from 'element-ui' //引入element ui
-// import 'element-ui/lib/theme-chalk/index.css' //引入element ui的css
-// Vue.use(Element)  //直接引入全部element-ui
-
-
-//npm install babel-plugin-component -D
-import { Button, Row, DatePicker } from 'element-ui'
-
-
 Vue.config.productionTip = false
-
+Vue.use(VueRouter)  //使用router插件
 new Vue({
   render: h => h(App),
   store: store,

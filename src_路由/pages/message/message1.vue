@@ -3,11 +3,10 @@
         <span v-for="d in details" :key="d.id">
             <!-- 跳转路由添加query参数 -->
 
-            <router-link replace :to="`/page1/message1/detail/${d.id * 9}?id2=${d.id}`">query {{ d.detail }}
-            </router-link>
+            <router-link replace :to="`/page1/message1/detail?id=${d.id}`">query {{ d.detail }}</router-link>
         </span>
         <hr>
-        <span v-for="d in details" :key="d.id + 5">
+        <span v-for="d in details" :key="d.id">
             <!-- 跳转路由添加query参数 对象写法 -->
             <router-link :to="{
                 name: 'detail', //通过name绑定路径
